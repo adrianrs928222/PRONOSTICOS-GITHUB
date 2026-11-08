@@ -61,3 +61,12 @@ Se han incorporado las reglas de competiciones principales y secundarias del arc
 El endpoint devuelve `diagnostics.eligible`, `diagnostics.excludedLeagues` y `eligibleFixtures`. Analiza primero las competiciones prioritarias; no promete cuotas donde la API no devuelve precios. `MAX_FIXTURES_PER_SCAN` admite 1-120, pero subirlo consume más llamadas; empieza por 12-20 con un plan pequeño.
 
 No se ha incorporado la integración con The Odds API del proyecto de origen porque el usuario solo dispone de API-Football. Tampoco se han copiado módulos de ML sin entrenamiento ni credenciales.
+
+
+## V6 — Ranking TOP 4
+- Cuatro combinadas como máximo, cuota total máxima 220, sin mínimo obligatorio.
+- Lesiones consultadas en lotes de hasta 20 fixtures; si la cobertura falla, se declara la ausencia de información.
+- No se infiere la relevancia de cada lesionado sin métricas individuales: el sistema aumenta la incertidumbre, no inventa efectos.
+- Los mercados siguen limitados a los que ofrece el proveedor y calcula el motor. Alineaciones confirmadas y evaluación individual de bajas NO están implementadas en esta entrega.
+- El contador de API es por instancia, no global.
+- Sin cuota real no se genera combinada. Las puntuaciones no están calibradas con backtesting.

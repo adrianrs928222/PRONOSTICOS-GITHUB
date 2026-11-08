@@ -1,5 +1,5 @@
 const ROOT='https://v3.football.api-sports.io';
-const TTL:Record<string,number>={'/fixtures':1800,'/teams/statistics':43200,'/odds':1800};
+const TTL:Record<string,number>={'/fixtures':1800,'/teams/statistics':43200,'/odds':1800,'/injuries':3600,'/fixtures/lineups':1200};
 const cache=new Map<string,{expires:number,data:any}>();
 const inflight=new Map<string,Promise<any>>();
 const daily={day:'',used:0,failures:0,cacheHits:0};

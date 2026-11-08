@@ -1,0 +1,1 @@
+import './globals.css';import type {Metadata} from 'next';export const metadata:Metadata={title:'FUTBOLYLICTS AI | Quant Terminal',description:'Análisis cuantitativo de fútbol con datos de API-Football'};export default function Layout({children}:{children:React.ReactNode}){return <html lang="es"><body>{children}</body></html>}
